@@ -8,6 +8,16 @@ plugins {
     kotlin("plugin.jpa") version "1.4.32"
 }
 
+allOpen {
+    annotation("javax.persistence.Entity")
+    annotation("javax.persistence.Embeddable")
+    annotation("javax.persistence.MappedSuperclass")
+}
+
+noArg {
+    annotation("javax.persistence.Entity")
+}
+
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
